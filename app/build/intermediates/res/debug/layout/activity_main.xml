@@ -1,0 +1,241 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context=".MainActivity" >
+
+    <SurfaceView
+        android:id="@+id/surfaceViewCamera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingBottom="0dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:paddingTop="0dp" />
+
+    <com.example.camera_ruler.MySurfaceView
+        android:id="@+id/surfaceViewDraw"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/imageViewLeftTopCorner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/corner" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/corner" />
+
+        <ImageView
+            android:id="@+id/ImageView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/corner" />
+
+        <ImageButton
+            android:id="@+id/ImageButton07"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ImageButton03"
+            android:layout_below="@+id/ImageButton06"
+            android:layout_marginLeft="18dp"
+            android:alpha="0.5"
+            android:background="#00ffffff"
+            android:src="@drawable/round_button" />
+
+        <ImageButton
+            android:id="@+id/ImageButton02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ImageButton03"
+            android:layout_below="@+id/ImageButton07"
+            android:layout_marginLeft="18dp"
+            android:alpha="0.5"
+            android:background="#00ffffff"
+            android:src="@drawable/round_button" />
+
+        <ImageButton
+            android:id="@+id/ImageButton04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ImageButton03"
+            android:layout_marginLeft="87dp"
+            android:alpha="0.5"
+            android:background="#00ffffff"
+            android:src="@drawable/round_button" />
+
+        <ImageButton
+            android:id="@+id/ImageButton01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ImageButton08"
+            android:layout_marginLeft="29dp"
+            android:layout_toRightOf="@+id/ImageButton05"
+            android:alpha="0.5"
+            android:background="#00ffffff"
+            android:src="@drawable/round_button" />
+
+        <ImageButton
+            android:id="@+id/ImageButton03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ImageButton05"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/ImageButton04"
+            android:alpha="0.5"
+            android:background="#00ffffff"
+            android:src="@drawable/round_button" />
+
+        <ImageButton
+            android:id="@+id/ImageButton05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="73dp"
+            android:layout_toLeftOf="@+id/ImageButton08"
+            android:alpha="0.5"
+            android:background="#00ffffff"
+            android:src="@drawable/round_button" />
+
+        <ImageButton
+            android:id="@+id/ImageButton08"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="106dp"
+            android:layout_toRightOf="@+id/ImageButton06"
+            android:alpha="0.5"
+            android:background="#00ffffff"
+            android:src="@drawable/round_button" />
+
+        <ImageButton
+            android:id="@+id/ImageButton06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ImageButton04"
+            android:layout_marginLeft="152dp"
+            android:layout_marginTop="28dp"
+            android:layout_toRightOf="@+id/ImageButton07"
+            android:alpha="0.5"
+            android:background="#00ffffff"
+            android:src="@drawable/round_button" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewLeftTopCorner"
+            android:layout_toLeftOf="@+id/ImageView01"
+            android:src="@drawable/corner" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ImageButton05"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/imageViewLeftTopCorner"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/ImageButtonShowRuler"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:background="#00ffffff"
+                android:cropToPadding="false"
+                android:maxHeight="48dp"
+                android:maxWidth="48dp"
+                android:onClick="OnButtonShowRulerClick"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/show_ruler"
+                android:text="Show" />
+
+            <ImageButton
+                android:id="@+id/ImageButtonEdit"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:background="#00ffffff"
+                android:cropToPadding="false"
+                android:maxHeight="48dp"
+                android:maxWidth="48dp"
+                android:onClick="OnButtonEditClick"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/edit"
+                android:text="Show" />
+
+            <ImageButton
+                android:id="@+id/ImageButtonSave"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:background="#00ffffff"
+                android:cropToPadding="false"
+                android:maxHeight="48dp"
+                android:maxWidth="48dp"
+                android:onClick="OnButtonSaveClick"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/save"
+                android:text="Show" />
+
+            <ImageButton
+                android:id="@+id/ImageButtonOption"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="72dp"
+                android:adjustViewBounds="true"
+                android:background="#00ffffff"
+                android:cropToPadding="false"
+                android:maxHeight="48dp"
+                android:maxWidth="48dp"
+                android:onClick="OnButtonOptionClick"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/option"
+                android:text="Show" />
+
+            <ImageButton
+                android:id="@+id/ImageButtonSwitchCamera"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:background="#00ffffff"
+                android:cropToPadding="false"
+                android:maxHeight="48dp"
+                android:maxWidth="48dp"
+                android:onClick="OnButtonSwitchCameraClick"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/switch_camera"
+                android:text="Show" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout><!-- From: file:/usr/code_tmp/AndroidStudio/Projects/CameraRuler/app/src/main/res/layout/activity_main.xml -->

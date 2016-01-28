@@ -1,0 +1,216 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context=".OptionActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff0066a0" >
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#300000ff"
+                android:onClick="OnBackBtnClicked"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.65"
+                android:gravity="center_vertical"
+                android:text="显示选项设置"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/show_grid"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="18dp"
+            android:paddingRight="40dp" >
+
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:text="显示网格(0-10)" />
+
+            <SeekBar
+                android:id="@+id/SeekBarGridCnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" />
+
+            <CheckedTextView
+                android:id="@+id/textGridCnt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="0"
+                android:width="50dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line_width"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:gravity="center"
+            android:paddingRight="40dp" >
+
+            <CheckedTextView
+                android:id="@+id/checkedTextView1"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="线条宽度(0-100)"
+                android:textAlignment="center" />
+
+            <SeekBar
+                android:id="@+id/seekBarLineWidth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/checkedTextView1"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" />
+
+            <CheckedTextView
+                android:id="@+id/textLineWidth"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="0"
+                android:width="50dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:paddingRight="40dp" >
+
+            <CheckedTextView
+                android:id="@+id/CheckedTextView01"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="刻度线长(0-100)" />
+
+            <SeekBar
+                android:id="@+id/SeekBarScaleLen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" />
+
+            <CheckedTextView
+                android:id="@+id/textScaleWidth"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="0"
+                android:width="50dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="40dp"
+            android:paddingRight="40dp" >
+
+            <CheckedTextView
+                android:id="@+id/CheckedTextView02"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="文字阴影(0-10)" />
+
+            <SeekBar
+                android:id="@+id/seekBarShadowDeep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" />
+
+            <CheckedTextView
+                android:id="@+id/textShadow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="0"
+                android:width="50dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp" >
+
+            <CheckedTextView
+                android:id="@+id/CheckedTextView03"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="透明度(0-100)" />
+
+            <SeekBar
+                android:id="@+id/SeekBarAlpha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" />
+
+            <CheckedTextView
+                android:id="@+id/textTransparent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="0"
+                android:width="50dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

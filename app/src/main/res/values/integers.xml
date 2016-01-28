@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="button1_text">1</integer>
+    <integer name="button_show">2</integer>
+    <integer name="button_clear_text">3</integer>
+</resources>
